@@ -1,0 +1,104 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html,
+body{
+  overflow:hidden;
+}
+.container{
+  background-color: aqua;
+  height: 100dvh;
+  display: flex;
+  flex-direction: row;
+}
+.leftcontainer{
+background-image: linear-gradient(lightgray,white);
+display: flex;
+flex: 1;
+align-items: center;
+justify-content:center;
+flex-direction: column;
+}
+
+.leftcontainer img{
+  height: 40%;
+  width: 60%;
+  border-radius: 12px;
+}
+.leftcontainer p{
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+
+}
+
+.rightcontainer{
+  background-image: linear-gradient(lightgray,white);
+  display:flex;
+  flex: 1;
+  align-items: center;
+  justify-content:center;
+
+}
+
+.header{
+display: flex;
+flex-direction: row;
+height: 8%;
+width: 100%;
+padding: 6px;
+align-items: center;
+top: 0;
+border-bottom: 1px solid gray;
+}
+
+.header img{
+  width: 4%;
+  height: 4%;
+  margin-right: 12px;
+ 
+}
+
+.formcard{
+  background-color: #fff;
+  width: 60%;
+  max-height: 500px;
+  border-radius: 12px;
+  box-shadow: 4px 4px 24px 0px black;
+  padding: 12px;
+ 
+}
+.formcard div{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.formcard input{
+  margin-top: 8px;
+  width: 100%;
+  height: 30px;
+  border-radius: 12px;
+  border: 1px solid black;
+  padding-left: 8px;
+
+}
+
+
+.formcard label{
+  margin-bottom: 4px;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.formcard button{
+  height: 36px;
+  border-radius: 12px;
+  border: none;
+  background-color: black;
+  color: #fff;
+  font-weight: bold;
+}
+.formcard button:hover{
+  background-color: gray;
+}
