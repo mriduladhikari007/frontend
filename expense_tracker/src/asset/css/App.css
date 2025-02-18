@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
 }
-
+/* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -13,19 +13,10 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
-
 html,
 body{
   overflow:hidden;
-   flex: 1;
-align-items: center;
-justify-content:center;
-flex-direction: column;
-overflow-y: scroll;
-padding: 40px;
 }
-
-
 .container{
   background-color: aqua;
   height: 100dvh;
@@ -39,7 +30,6 @@ flex: 1;
 align-items: center;
 justify-content:center;
 flex-direction: column;
-
 padding: 40px;
 }
 
@@ -52,7 +42,6 @@ padding: 40px;
   margin-bottom: 20px;
   font-size: 24px;
   font-weight: bold;
-  overflow-y: scroll;
 
 }
 
@@ -104,6 +93,8 @@ border-bottom: 1px solid gray;
   border-radius: 12px;
   border: 1px solid black;
   padding-left: 8px;
+  box-sizing: border-box;
+  padding-right: 8px;
 
 }
 
@@ -127,32 +118,21 @@ border-bottom: 1px solid gray;
 }
 
 .expenseCard{
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   border: 1px solid black;
   width: 80%;
   padding: 20px;
   margin-bottom: 5px;
- 
-
 }
 
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-.dropdown .dropbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: black;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
+
+
+
+
 .navbar a:hover, .dropdown:hover .dropbtn {
   background-color: lightgray;
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -160,8 +140,10 @@ border-bottom: 1px solid gray;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  right: 0;
 }
-.dropdown-content a {
+
+.dropdown-content p {
   float: none;
   color: black;
   padding: 12px 16px;
@@ -169,9 +151,71 @@ border-bottom: 1px solid gray;
   display: block;
   text-align: left;
 }
-.dropdown-content a:hover {
+
+.dropdown-content p:hover {
   background-color: #ddd;
 }
+
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal2 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  justify-items: center;
+}
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  justify-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.modal-content button{
+  height: 20px;
+  border: none;
+  background-color: black;
+  color: #fff;
+  font-weight: bold;
+  width: 80px;
+  margin-right: 10px;
 }
